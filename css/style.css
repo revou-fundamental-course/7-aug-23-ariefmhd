@@ -1,0 +1,303 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #121212;
+}
+
+html {
+  height: auto;
+  background: linear-gradient(limegreen, transparent),
+    linear-gradient(90deg, skyblue, transparent),
+    linear-gradient(-90deg, coral, transparent);
+
+  background-blend-mode: screen;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Mengatur tata letak header ke tengah */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+header {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+}
+
+header h1 {
+  letter-spacing: 1px;
+}
+header h2 {
+  font-size: 60px;
+  letter-spacing: 3px;
+  color: #121212;
+}
+
+header p {
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: #ff0000;
+}
+
+.luas,
+.keliling {
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+  width: 45%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #121212;
+  box-shadow: 20px 30px 1px #52206b;
+  transition: transform 0.5s ease;
+}
+
+.luas h1 {
+  text-align: center;
+  padding: 15px;
+}
+
+.p-jarak {
+  padding-bottom: 20px;
+}
+
+.keliling {
+  display: none;
+}
+
+.judul {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
+  font-size: 40px;
+  background-color: #121212;
+  border-radius: 14px;
+  margin-top: auto;
+  padding: 10px 100px;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.pic-1,
+.pic-2 {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 35px auto;
+  margin-bottom: -5px;
+}
+
+img {
+  height: 300px;
+}
+
+.sub-judul {
+  padding: 20px;
+}
+
+.rumus-luas,
+.rumus-keliling {
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 2px solid #f2f2f2;
+}
+
+.rumus-luas,
+.rumus-keliling p {
+  font-weight: 600;
+}
+
+.form-hitung {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.form-triangle {
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-segitiga {
+  color: #ffffff;
+  padding: 15px;
+  margin: 30px 0px;
+  width: 310px;
+  font-size: 15px;
+  background: #7b4397;
+  border-radius: 30px;
+  font-weight: 800;
+  border-style: none;
+  box-shadow: 5px 5px 0px 0px #000;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.btn-hitung,
+.btn-reset {
+  margin: 10px;
+  width: 120px;
+}
+
+.form-hitung {
+  margin-bottom: 20px;
+}
+
+.result-box {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-segitiga.active,
+.btn-segitiga.active:hover {
+  background-color: #ff0000;
+}
+
+.form-hitung .button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-segitiga {
+  width: calc(50% - 10px);
+  margin: 0;
+}
+
+.btn-hitung-1 {
+  background-color: #2477bf;
+}
+
+.btn-reset {
+  width: calc(50% - 10px);
+  margin-left: 20px;
+  background-color: #5bc236;
+}
+
+.error-message {
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #ff0000;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #121212;
+  font-family: 'Bangers', cursive;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer p {
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .luas,
+  .keliling {
+    width: 90%;
+  }
+
+  .judul {
+    font-size: 30px;
+    padding: 10px 50px;
+  }
+
+  .pic-1,
+  .pic-2 {
+    margin: 20px auto;
+    margin-bottom: 0;
+    max-width: 80%;
+  }
+
+  .rumus-luas,
+  .rumus-keliling {
+    max-width: 100%;
+  }
+
+  .input-container input {
+    width: 100%;
+  }
+
+  .btn-segitiga {
+    width: 100%;
+  }
+
+  .button-container {
+    align-items: center;
+    padding: 10px;
+  }
+
+  .btn-reset {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+}

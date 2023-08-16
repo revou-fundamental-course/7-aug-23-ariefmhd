@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevoU | Mini Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+   
+    
+    <div class="content">
+    <div class="container">
+      <header>
+        <h1>Welcome to Katik</h1>
+        <h2>Kalkulator Matematik</h2>
+        <p>
+          Hai Sobat, Selamat datang di Katik <br />
+          Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas
+          dan keliling segitiga.
+        </p>
+        <div class="menu">
+          <button id="luasButton" class="btn-segitiga btn-hitung active" onclick="showLuasSection()">Luas Segitiga</button>
+        </div>
+        <div class="menu">
+          <button id="kelilingButton" class="btn-segitiga btn-hitung" onclick="showKelilingSection()">Keliling Segitiga</button>
+        </div>
+      </header>
+    </div>
+
+    <div class="luas">    
+      <h1 class="judul">Luas Segitiga</h1>
+      <img class="pic-1" src="img/segitiga.svg" alt="Luas Segitiga" />
+      <div class="rumus-luas">
+        <p class="p-jarak">Rumus Luas Segitiga yaitu : </p>
+        <p><center><strong>L = 1/2 x a x t</strong></center></p>
+        <p>Di mana:</p>
+        <p>L = Luas</p>
+        <p>a = Panjang Alas</p>
+        <p>t = Tinggi</p>
+      </div>
+    
+      <div class="form-hitung">
+          <h3  class="sub-judul">Hitung Luas Segitiga<h3>
+            <div class="input-container">             
+              <input type="number" id="alas-segitiga" placeholder="Nilai Alas (a)">             
+          </div>
+          <div class="input-container">           
+              <input type="number" id="tinggi-segitiga" placeholder="Nilai Tinggi (t)">              
+          </div>
+          <div class="result-box">
+            <p id="result-text"></p>
+          </div>
+          <div class="error-message" id="error-message-luas"></div>
+          <div class="button-container">
+            <button class="btn-segitiga btn-hitung-1" onclick="calculatetriangle()">Hitung</button>
+            <button class="btn-segitiga btn-reset" onclick="resetForm()">Reset</button>
+          </div>          
+      </div>  
+      </div>
+
+      <div class="keliling">        
+        <h1 class="judul">Keliling Segitiga</h1>
+        <img class="pic-2" src="img/segitiga.svg" alt="Keliling Segitiga" />
+        <div class="rumus-keliling">
+          <p class="p-jarak">Rumus Keliling Segitiga yaitu :</p>
+          <p><center><strong>K = S1 + S2 + S3</strong></center></p>
+          <p>Di mana:</p>
+          <p>K = Keliling</p>
+          <p>S1 = Sisi A</p>
+          <p>S2 = Sisi B</p>
+          <p>S3 = Sisi C</p>
+        </div>
+      
+        <div class="form-hitung">
+            <h3  class="sub-judul">Hitung Keliling Segitiga<h3>
+              <div class="input-container">               
+                <input type="number" id="side-a" placeholder="Nilai Sisi A">
+              </div>
+              <div class="input-container">              
+                <input type="number" id="side-b" placeholder="Nilai Sisi B">
+              </div>
+              <div class="input-container">                
+                <input type="number" id="side-c" placeholder="Nilai Sisi C">
+              </div>
+              
+              <div class="result-box">
+                <p id="keliling-result-text"></p>
+              </div>
+              <div class="error-message" id="error-message-keliling"></div>
+            <div class="button-container">            
+              <button class="btn-segitiga btn-hitung-1" onclick="calculateKeliling()">Hitung</button>
+    <button class="btn-segitiga btn-reset" onclick="resetForm()">Reset</button>
+            </div>
+                  </div>    
+      </div>
+      </div>
+
+      <footer>             
+              <p class="copyright"> Copyright 2023 &copy Katik All Rights Reserved</p>     
+      </footer>
+  <script src="js/script.js"></script>
+  </body>
+</html>
