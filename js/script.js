@@ -1,11 +1,15 @@
+// Fungsi untuk menghitung luas segitiga berdasarkan alas dan tinggi
 function calculatetriangle() {
+  // Mengambil input alas, tinggi, dan elemen pesan error dari halaman HTML
   let alasInput = document.getElementById('alas-segitiga');
   let tinggiInput = document.getElementById('tinggi-segitiga');
   let errorMessage = document.getElementById('error-message-luas');
 
+  // Mengambil nilai dari input dan mengonversinya menjadi angka
   let alas = parseFloat(alasInput.value);
   let tinggi = parseFloat(tinggiInput.value);
 
+  // Memeriksa apakah input valid atau tidak
   if (isNaN(alas) || isNaN(tinggi) || alas <= 0 || tinggi <= 0) {
     errorMessage.textContent = 'Masukkan Dulu Input Kamu Ya!!!';
     return;
@@ -30,6 +34,7 @@ function calculatetriangle() {
   document.getElementById('result-text').innerHTML = calculationSteps;
 }
 
+// Fungsi untuk mengatur ulang form input
 function resetForm() {
   document.getElementById('alas-segitiga').value = '';
   document.getElementById('tinggi-segitiga').value = '';
@@ -43,6 +48,7 @@ function resetForm() {
   document.getElementById('error-message-keliling').textContent = '';
 }
 
+// Fungsi untuk menampilkan bagian perhitungan luas segitiga dan menyembunyikan bagian perhitungan keliling
 function showLuasSection() {
   document.querySelector('.luas').style.display = 'block';
   document.querySelector('.keliling').style.display = 'none';
@@ -51,6 +57,7 @@ function showLuasSection() {
   document.getElementById('kelilingButton').classList.remove('active');
 }
 
+// Fungsi untuk menampilkan bagian perhitungan keliling segitiga dan menyembunyikan bagian perhitungan luas
 function showKelilingSection() {
   document.querySelector('.luas').style.display = 'none';
   document.querySelector('.keliling').style.display = 'block';
@@ -61,17 +68,21 @@ function showKelilingSection() {
 
 showLuasSection();
 
+// Fungsi untuk menghitung keliling segitiga berdasarkan panjang sisi-sisi
 function calculateKeliling() {
+  // Mengambil input panjang sisi-sisi, pesan error, dan elemen hasil dari halaman HTML
   let sisiAInput = document.getElementById('side-a');
   let sisiBInput = document.getElementById('side-b');
   let sisiCInput = document.getElementById('side-c');
   let errorMessage = document.getElementById('error-message-keliling');
   let resultText = document.getElementById('keliling-result-text');
 
+  // Mengambil nilai dari input dan mengonversinya menjadi angka
   let sisiA = parseFloat(sisiAInput.value);
   let sisiB = parseFloat(sisiBInput.value);
   let sisiC = parseFloat(sisiCInput.value);
 
+  // Memeriksa apakah input valid atau tidak
   if (
     isNaN(sisiA) ||
     isNaN(sisiB) ||
@@ -87,6 +98,7 @@ function calculateKeliling() {
 
   errorMessage.textContent = '';
 
+  // Menghitung keliling segitiga
   let keliling = sisiA + sisiB + sisiC;
 
   let calculationSteps =
