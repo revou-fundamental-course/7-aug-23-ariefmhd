@@ -6,6 +6,7 @@
   color: #121212;
 }
 
+/* Mengatur tampilan latar belakang halaman dengan gradient */
 html {
   height: auto;
   background: linear-gradient(limegreen, transparent),
@@ -15,6 +16,7 @@ html {
   background-blend-mode: screen;
 }
 
+/* Mengatur tata letak konten utama */
 .content {
   display: flex;
   flex-direction: column;
@@ -117,6 +119,7 @@ img {
   padding: 20px;
 }
 
+/* Mengatur tampilan rumus perhitungan luas dan keliling */
 .rumus-luas,
 .rumus-keliling {
   margin-top: 20px;
@@ -256,6 +259,7 @@ footer p {
   letter-spacing: 1px;
 }
 
+/* Media Query untuk tampilan responsive */
 @media screen and (max-width: 768px) {
   .luas,
   .keliling {
